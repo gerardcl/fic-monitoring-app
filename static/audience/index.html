@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<link rel="shortcut icon" href="img/kurento.png" type="image/png"/>
+
+		<link rel="stylesheet" href="css/style.css">
+
+		<script src="bower_components/adapter.js/adapter.js"></script>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/draggabilly/dist/draggabilly.pkgd.min.js"></script>
+		<script src="bower_components/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+		<script src="bower_components/screenfull/dist/screenfull.js"></script>
+
+		<script src="bower_components/kurento-utils/js/kurento-utils.js"></script>
+
+		<script src="js/index.js"></script>
+		<title>Connected Bodies Scenario : Fabra i Coats</title>
+	</head>
+	<body>
+		<section id="registration">
+      <label for="name">Name</label>
+			<input id="name" name="name" class="form-control" type="text">
+			<a id="register" href="#">Register</a>
+			<label for="peer">Peer</label>
+			<input id="peer" name="peer" class="form-control" type="text">
+			<a id="call" href="#" disabled="disabled">Call</a>
+			<a id="terminate" href="#" disabled="disabled">Stop</a>
+			</div>
+		</section>
+		<section>
+			<article class="scenario scenarioB" style="margin-top:1em">
+				<div id="videoTag" class="">
+					<video id="video" autoplay="" width="640px" height="480px" poster="./img/webrtc.png"></video>
+				</div>
+				<h2 class="txtB">Escenario remoto</h2>
+				<br>
+				<ul>
+          <li><div id="sBc1" class="numberCircle">1</div></li>
+					<li><div id="sBc2" class="numberCircle">2</div></li>
+					<li><div id="sBc3" class="numberCircle">3</div></li>
+					<li><div id="sBc4" class="numberCircle">4</div></li>
+					<li><div id="sBc5" class="numberCircle">5</div></li>
+					<li><div id="sBc6" class="numberCircle">6</div></li>
+					<li><div id="sBc7" class="numberCircle">7</div></li>
+					<li><div id="sBc8" class="numberCircle">8</div></li>
+					<li><div id="sBc9" class="numberCircle">9</div></li>
+					<li><div id="sBc10" class="numberCircle">10</div></li>
+				</ul>
+				<br>
+				<p>
+					<b>Utiliza los botones <span class="txtB">+</span> y <span class="txtB">-</span> para alterar la complejidad del ritmo<br>en el escenario B</b>
+				</p>
+				<br>
+				<p>
+					<img src="img/masmenosB.png" />
+				</p>
+			</article>
+			<article class="scenario scenarioA" style="border:black">
+
+			    <header>
+				<h1 style="font-size:16px">Connected Bodies&reg;</h1>
+				<aside style="padding-right:0em; padding-top:1em;">
+				    <img src="img/logos.png" width="200px" />
+			    	</aside>
+			    </header>
+			    <h3 style="font-size:12px">
+				Connected Bodies es un entorno interactivo audiovisual y una experiencia en red entre la performance y la instalación, que permite que dos o mas personas geográficamente separadas puedan interactuar simultaneamente en un entorno tele-conectado.
+			    </h3>
+			    <img src="img/cbodies_info.svg" height="930px" />
+			</article>
+		</section>
+		<footer>
+
+		</footer>
+	</body>
+	<script>
+	const targetOut = $('#video')[0]; // Get DOM element from jQuery collection
+
+	$('#video').click(() => {
+		if (screenfull.enabled) {
+			screenfull.request(targetOut);
+			//screenfull.toggle(target);
+		}
+	});
+	</script>
+</html>
